@@ -1,0 +1,7 @@
+{
+  "camelcase": false,
+  "curly": true,
+  "jquery": "jQuery",
+  "strict": true,
+  "browser": true
+}
