@@ -1,14 +1,7 @@
-# generator-drupal-module
+# generator-simple-gulp-scss
 
-This is a small Yeoman generator to create a Drupal module.
+This is a small Yeoman generator to create a simple workflow with gulp and scss.
 
-For now it creates .info-file, .module-file and .install-file with a couple of hooks that
-are pretty common.
+It creates a simple folder structure and a gulpfile.
 
-## Generated file structure:
-
-    Modulefolder
-      |- modulename.info
-      |- modulename.install
-      |- modulename.module
-      |- templates
+After install you must type npm install to get started.
