@@ -4,6 +4,7 @@ var path = require('path');
 var assert = require('yeoman-generator').assert;
 var helpers = require('yeoman-generator').test;
 var os = require('os');
+var fs = require('fs');
 
 describe('yeoman:app', function () {
   before(function (done) {
@@ -18,10 +19,24 @@ describe('yeoman:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'bower.json',
       'package.json',
-      '.editorconfig',
+      'gulpfile.js',
       '.jshintrc'
     ]);
+  });
+
+  it('create folders', function() {
+    var filePaths = [
+      'dev/js',
+      'dev/scss',
+      'assets/js',
+      'assets/css'
+    ];
+    filePaths.forEach(function(path) {
+      var stat = fs.statSync(path);
+      if (!stat.isDirectory) {
+        throw('Folder: "' + path + '" does not exist.');
+      }
+    });
   });
 });
