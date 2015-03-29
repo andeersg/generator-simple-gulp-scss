@@ -17,6 +17,7 @@ describe('yeoman:app', function () {
       .on('end', done);
   });
 
+  // Test to see if all files are created.
   it('creates files', function () {
     assert.file([
       'package.json',
@@ -25,7 +26,8 @@ describe('yeoman:app', function () {
     ]);
   });
 
-  it('create folders', function() {
+  // Test to see if folders are created.
+  it('create folder structure', function() {
     var filePaths = [
       'dev/js',
       'dev/scss',
