@@ -18,27 +18,15 @@ describe('yeoman:app', function () {
   });
 
   // Test to see if all files are created.
-  it('creates files', function () {
+  it('creates files and folders', function () {
     assert.file([
       'package.json',
       'gulpfile.js',
-      '.jshintrc'
-    ]);
-  });
-
-  // Test to see if folders are created.
-  it('create folder structure', function() {
-    var filePaths = [
+      '.jshintrc',
       'dev/js',
       'dev/scss',
       'assets/js',
       'assets/css'
-    ];
-    filePaths.forEach(function(path) {
-      var stat = fs.statSync(path);
-      if (!stat.isDirectory) {
-        throw('Folder: "' + path + '" does not exist.');
-      }
-    });
+    ]);
   });
 });
