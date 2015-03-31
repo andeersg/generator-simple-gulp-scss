@@ -4,6 +4,15 @@ var chalk = require('chalk');
 var yosay = require('yosay');
 
 module.exports = yeoman.generators.Base.extend({
+  constructor: function () {
+    yeoman.generators.Base.apply(this, arguments);
+
+    this.option('skip-install', {
+      desc: 'Skips the installation of dependencies',
+      type: Boolean
+    });
+  },
+
   initializing: function () {
     this.pkg = require('../package.json');
   },
@@ -50,6 +59,8 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
   install: function() {
-    this.npmInstall();
+    if (!this.options['skip-install']) {
+      this.installDependencies();
+    }
   }
 });
