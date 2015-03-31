@@ -48,5 +48,8 @@ module.exports = yeoman.generators.Base.extend({
       this.template('_gulpfile.js', 'gulpfile.js', context);
       this.template('jshintrc', '.jshintrc', context);
     }
+  },
+  install: function() {
+    this.npmInstall();
   }
 });
