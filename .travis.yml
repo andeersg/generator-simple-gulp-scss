@@ -1,10 +1,19 @@
 language: node_js
+
 node_js:
-  - '0.10'
+- '0.10'
 
 deploy:
   provider: npm
-  email: "anders.2205@gmail.com"
-  api_key: "YW5kZWVyc2c6YW5kM3JzMjIwNQ=="
+  email: anders.2205@gmail.com
+  api_key: YW5kZWVyc2c6YW5kM3JzMjIwNQ==
   on:
     tags: true
+
+notifications:
+  slack:
+    secure: s5P6ZDN1DtzNeDwU99n8uDTSXDVpoFoClJkLzWWdNuU6xylVfe/D1+wV3vcL7JmGC0Ij9TLO6T6pYePREeIkraQ5YKC8fZ75jRy88GUs1LcZV9+FQNf8WbqBcJPMBYV0sTMEvLsSTFBakKrOtOyzT5Es69BbK+R4UWojSpXPWyo=
+
+after_script:
+  - ./node_modules/.bin/istanbul cover -- ./node_modules/.bin/_mocha
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js > /dev/null 2>&1
