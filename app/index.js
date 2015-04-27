@@ -59,6 +59,7 @@ module.exports = yeoman.generators.Base.extend({
     }
   },
   install: function() {
+    /* istanbul ignore if  */
     if (!this.options['skip-install']) {
       this.installDependencies();
     }
