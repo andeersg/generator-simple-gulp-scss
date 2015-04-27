@@ -1,4 +1,7 @@
-# Simple Gulp SCSS generator! [![Build Status](https://travis-ci.org/andeersg/generator-simple-gulp-scss.svg?branch=master)](https://travis-ci.org/andeersg/generator-simple-gulp-scss)
+Simple Gulp SCSS generator!
+===========================
+[![Build Status](https://travis-ci.org/andeersg/generator-simple-gulp-scss.svg?branch=master)](https://travis-ci.org/andeersg/generator-simple-gulp-scss)
+[![Coverage Status](https://coveralls.io/repos/andeersg/generator-simple-gulp-scss/badge.svg)](https://coveralls.io/r/andeersg/generator-simple-gulp-scss)
 
 This is a simple and efficient way to get a Gulp setup for SCSS and JS up and running.
 
