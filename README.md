@@ -1,5 +1,7 @@
 Simple Gulp SCSS generator!
 ===========================
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/andeersg/generator-simple-gulp-scss.svg)](https://greenkeeper.io/)
 [![Build Status](https://travis-ci.org/andeersg/generator-simple-gulp-scss.svg?branch=master)](https://travis-ci.org/andeersg/generator-simple-gulp-scss)
 [![Coverage Status](https://coveralls.io/repos/andeersg/generator-simple-gulp-scss/badge.svg)](https://coveralls.io/r/andeersg/generator-simple-gulp-scss)
 
